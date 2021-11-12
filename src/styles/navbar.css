@@ -1,0 +1,31 @@
+.logo {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 250px;
+}
+
+.navbar {
+    background-color: #F3E0F4;
+}
+
+.nav-link-profile {
+    background-color: #72DDF7;
+    border-radius: 1px black;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link-therapist {
+    background-color: #72DDF7;
+    border-radius: 1px black;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link-logout {
+    background-color: #72DDF7;
+    border-radius: 1px black;
+    display: flex;
+    justify-content: center;
+}
