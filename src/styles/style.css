@@ -6,8 +6,22 @@ body {
 
 .intro {
     border: 3px solid #72DDF7;
+    width: 50em;
+    margin-left: 35em;
+    margin-top: 10em;
 }
 
 .questionnaire {
-    color: #72DDF7;
+    background-color: #72DDF7;
+    margin-left: 54em;
+}
+
+.headerOne {
+    display: flex;
+    justify-content: center;
+}
+
+.headerThree {
+    display: flex;
+    justify-content: center;
 }
