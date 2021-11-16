@@ -3,3 +3,11 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #FDF9FD;
 }
+
+.intro {
+    border: 3px solid #72DDF7;
+}
+
+.questionnaire {
+    color: #72DDF7;
+}

@@ -12,10 +12,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 </head>
 
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><img src="./images/Mental Mentor (2).jpg" class="logo" alt=logo/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <button class="link"><a class="nav-item-profile nav-link" href="#">Profile</a></button>
+            <button class="link"><a class="nav-item-therapist nav-link" href="#">Therapist</a></button>
+            <button class="link"><a class="nav-item-logout nav-link" href="#">Logout</a></button>
+        </div>
+    </div>
+</nav>
+
 <body>
-    <header-component></header-component>
-    <a href="src/pages/questionnaire.html">Get Started</a>
     <!--Main Content-->
+    <header-component></header-component>
+    <div class="intro">
+        <h1>How Does it Work</h1>
+        <h3>1. Take a brief questionnaire</h3>
+        <h3>2. Review your matches with local therapist selected for you</h3>
+        <h3>3. Make an appointment for an in-person session</h3>
+        <button class="questionnaire"><a href="src/pages/questionnaire.html">Get Started</a></button>
+    </div>
+
 
 
 
