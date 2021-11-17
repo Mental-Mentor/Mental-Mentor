@@ -24,13 +24,6 @@
  li a:hover {
      background-color: #72DDF7;
  }
- /* This is the color above the navbar */
- 
- .jumbotron {
-     margin: 0;
-     padding: 25px;
-     background-image: linear-gradient(to right, #F3E0F4, #F3E0F4, #FDF9FD);
- }
  /* This is the text */
  
  .mental {
@@ -43,4 +36,8 @@
      font-family: Arial, Helvetica, sans-serif;
      font-size: small;
      text-shadow: 1px 1px #72DDF7;
+ }
+ 
+ .name {
+     color: black;
  }
