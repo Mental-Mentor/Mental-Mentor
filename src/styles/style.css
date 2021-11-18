@@ -1,4 +1,73 @@
 body {
+    background-color: #FDF9FD;
     font-family: 'Nunito', sans-serif;
-    background-color:  #FDF9FD;
+    background-color: #FDF9FD;
+}
+
+
+/* Style for home page  */
+
+.intro {
+    border: 3px solid #72DDF7;
+    width: 35em;
+    height: 20em;
+    margin-top: 16em;
+    margin-right: 10em;
+    float: right;
+}
+
+.questionnaire {
+    margin-left: 30em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #72DDF7;
+    margin-top: 20px;
+    margin-right: 2em;
+    float: right;
+    cursor: pointer;
+}
+
+.questionnaire:hover {
+    border: 2px solid #72DDF7;
+    background-color: #F3E0F4;
+}
+
+
+/* images on home page */
+
+.imgone {
+    width: 2010px;
+    height: 1010px;
+}
+
+.imgtwo {
+    width: 1000px;
+    margin-top: 5em;
+    margin-left: 5em;
+    float: left;
+}
+
+
+/* Style the button and place it in the middle of the container/image */
+
+.container .btn {
+    position: absolute;
+    top: 70%;
+    left: 7%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #72DDF7;
+    float: right;
+    cursor: pointer;
+}
+
+.container .btn:hover {
+    border: 2px solid #72DDF7;
+    background-color: #F3E0F4;
 }
