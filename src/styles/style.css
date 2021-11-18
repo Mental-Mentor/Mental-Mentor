@@ -17,17 +17,28 @@ body {
 }
 
 .questionnaire {
-    background-color: #72DDF7;
     margin-left: 30em;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: #72DDF7;
+    margin-top: 20px;
+    margin-right: 2em;
+    float: right;
+    cursor: pointer;
+}
+
+.questionnaire:hover {
+    border: 2px solid #72DDF7;
+    background-color: #F3E0F4;
 }
 
 
 /* images on home page */
 
 .imgone {
-    width: 2005px;
+    width: 2010px;
     height: 1010px;
-    margin-top: 2em;
 }
 
 .imgtwo {
@@ -42,19 +53,21 @@ body {
 
 .container .btn {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 7%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #72DDF7;
     color: white;
     font-size: 16px;
-    padding: 12px 24px;
+    padding: 10px 25px;
+    border-radius: 10px;
     border: none;
+    background-color: #72DDF7;
+    float: right;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .container .btn:hover {
+    border: 2px solid #72DDF7;
     background-color: #F3E0F4;
 }
