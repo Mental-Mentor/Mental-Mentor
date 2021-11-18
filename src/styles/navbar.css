@@ -22,7 +22,7 @@
  /* Change the link color on hover */
  
  li a:hover {
-     background-color: #72DDF7;
+     background-color: #FDF9FD;
  }
  /* This is the text */
  
@@ -40,4 +40,12 @@
  
  .name {
      color: black;
+ }
+ 
+ .start {
+     background-color: #72DDF7;
+     float: right;
+     margin-top: 80px;
+     margin-right: 3px;
+     height: 40px;
  }

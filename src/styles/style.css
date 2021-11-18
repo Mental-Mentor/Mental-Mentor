@@ -9,22 +9,30 @@ body {
 
 .intro {
     border: 3px solid #72DDF7;
-    width: 50em;
-    margin-left: 35em;
-    margin-top: 10em;
+    width: 35em;
+    height: 20em;
+    margin-top: 16em;
+    margin-right: 10em;
+    float: right;
 }
 
 .questionnaire {
     background-color: #72DDF7;
-    margin-left: 54em;
+    margin-left: 30em;
 }
 
-.headerOne {
-    display: flex;
-    justify-content: center;
+
+/* images on home page */
+
+.imgone {
+    width: 2005px;
+    height: 1010px;
+    margin-top: 2em;
 }
 
-.headerThree {
-    display: flex;
-    justify-content: center;
+.imgtwo {
+    width: 1000px;
+    margin-top: 5em;
+    margin-left: 5em;
+    float: left;
 }
