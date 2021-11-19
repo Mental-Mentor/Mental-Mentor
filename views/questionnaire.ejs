@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="../styles/questionnaire.css">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+</head>
+<body>
+    <%- include('mainHeader'); -%>
+    <div id="quiz-container">
+         <h3 id="display-question"></h3>
+         <input type="radio" name="option" id="optionA" value="optionA" class="ans"><span id="optionA-label"></span><br/>
+         <input type="radio" name="option" id="optionB" value="optionB" class="ans"><span id="optionB-label"></span><br/>
+         <button onclick = "nextQuestion()" class="next" id="next">NEXT</button>
+    </div>
+    <script src="../js/components/questionnaireData.js"></script>
+</body>
+</html>
