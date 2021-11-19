@@ -2,6 +2,7 @@ body{
     background-color: #FDF9FD;
     height: 100vh;
     font-family: 'Nunito', sans-serif;
+    margin: 0px;
 }
 #quiz-container{
     background-color:#F3E0F4;
