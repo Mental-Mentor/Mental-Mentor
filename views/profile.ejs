@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/profile.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
     <title>Profile</title>
 </head>
+
 <body>
-    <h1> Hi User!!!</h1>
+    <!-- Navbar - change this to logged in header later -->
+    <%- include('mainHeader'); -%>
+
+        <!-- Display user data in profile -->
+        <div class="container">
+
+            <h1>Welcome <span id="userFirstName">User</span>!</h1>
+
+            <!-- Placeholder picture for profile - update src later -->
+            <div class="image-container">
+                <img class="profilePic" src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+                    alt="profilePic">
+            </div>
+
+            <div class="userInfo">
+                <p id="name"><span id="firstName">First </span><span id="lastName">Last</span></p>
+                <p id="phone">5557894561</p>
+                <p id="email">email@email.com</p>
+                <p id="dob">12251999</p>
+                <p id="address"><span id="address1">123 Main St </span><span id="address2">Apt 1</span></p>
+                <p id="cityStZip"><span id="city">Detroit, </span><span id="state">MI </span><span id="zip">48222</span></p>
+            </div>
+
+            <br>
+
+            <a href="/questionnaire"><button class="btn">Complete Questionnaire</button></a>
+
+        </div>
+
+        <script src="../js/components/profile.js"></script>
 </body>
+
 </html>
