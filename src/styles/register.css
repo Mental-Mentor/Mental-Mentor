@@ -5,9 +5,10 @@
 /* add a background Image*/
 body {
   background-image: url("../images/TherapistOne.jpg");
-  height: 100vh;
-  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
   background-size: cover;
+  background-color: #fdf9fd;
 }
 
 /* resizing the image to fit the window */
@@ -16,8 +17,6 @@ form {
   font-family: Arial, Helvetica, sans-serif;
   width: 30%;
   border: 3px solid black;
-  top: 50%;
-  left: 50%;
 }
 
 * {
@@ -32,7 +31,8 @@ form {
 
 /* Full-width input fields */
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+input[type="date"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -75,7 +75,15 @@ a {
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
-.signin {
+.signin,
+.register {
   background-color: #f1f1f1;
   text-align: center;
+}
+
+/*  */
+@media screen and (max-width: 425px) {
+  form {
+    width: 100%;
+  }
 }
