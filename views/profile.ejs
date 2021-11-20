@@ -19,7 +19,8 @@
         <!-- Display user data in profile -->
         <div class="container">
 
-            <h1>Welcome <span id="userFirstName">User</span>!</h1>
+            <!-- <h1>Welcome <span id="userFirstName"></span>!</h1> -->
+            <h1>Welcome <%= firstName %>!</h1>
 
             <!-- Placeholder picture for profile - update src later -->
             <div class="image-container">
@@ -28,12 +29,12 @@
             </div>
 
             <div class="userInfo">
-                <p id="name"><span id="firstName">First </span><span id="lastName">Last</span></p>
-                <p id="phone">5557894561</p>
-                <p id="email">email@email.com</p>
-                <p id="dob">12251999</p>
-                <p id="address"><span id="address1">123 Main St </span><span id="address2">Apt 1</span></p>
-                <p id="cityStZip"><span id="city">Detroit, </span><span id="state">MI </span><span id="zip">48222</span></p>
+                <p id="name"><span id="firstName"><%= firstName %> </span><span id="lastName"><%= lastName %></span></p>
+                <p id="phone">phone number here</p>
+                <p id="email">email here</p>
+                <p id="dob">DOB here</p>
+                <p id="address"><span id="address1"><%= address1 %></span><span id="address2">, <%= address2 %></span></p>
+                <p id="cityStZip"><span id="city"><%= city %>, </span><span id="state"><%= state %> </span><span id="zip"><%= zipcode %></span></p>
             </div>
 
             <br>
