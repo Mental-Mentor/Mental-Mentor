@@ -1,20 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questionnaire</title>
-    <link rel="stylesheet" href="../styles/questionnaire.css">
+    <link rel="stylesheet" href="./styles/questionnaire.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
 </head>
+
 <body>
     <%- include('mainHeader'); -%>
-    <div id="quiz-container">
-         <h3 id="display-question"></h3>
-         <input type="radio" name="option" id="optionA" value="optionA" class="ans"><span id="optionA-label"></span><br/>
-         <input type="radio" name="option" id="optionB" value="optionB" class="ans"><span id="optionB-label"></span><br/>
-         <button onclick = "nextQuestion()" class="next" id="next">NEXT</button>
-    </div>
-    <script src="../js/components/questionnaireData.js"></script>
+
+        <h2>Please complete the following questions so we can find the right therapist for you:</h2>
+
+        <div id="quiz-container">
+            <form>
+                <div class="mood">
+                    <h3>Over the past 2 weeks, how often have you experienced:</h3>
+
+                    <h4>1. Little interest or pleasure in doing things?</h4>
+                        <input type="radio" name="q1" value="0" required>Never
+                        <input type="radio" name="q1" value="1">Rarely
+                        <input type="radio" name="q1" value="2">Sometimes
+                        <input type="radio" name="q1" value="3">Often
+                        <input type="radio" name="q1" value="4">Nearly every day
+
+                    <h4>2. Difficulty falling asleep, staying asleep, or sleeping more than usual?</h4>
+                        <input type="radio" name="q2" value="0" required>Never
+                        <input type="radio" name="q2" value="1">Rarely
+                        <input type="radio" name="q2" value="2">Sometimes
+                        <input type="radio" name="q2" value="3">Often
+                        <input type="radio" name="q2" value="4">Nearly every day
+
+                    <h4>3. Trouble focusing, anxious thoughts, or restlessness?</h4>
+                        <input type="radio" name="q3" value="0" required>Never
+                        <input type="radio" name="q3" value="1">Rarely
+                        <input type="radio" name="q3" value="2">Sometimes
+                        <input type="radio" name="q3" value="3">Often
+                        <input type="radio" name="q3" value="4">Nearly every day
+                </div>
+                <br><br>
+
+                <div class="family">
+                    <h3>Please rate the following statements:</h3>
+                    
+                    <h4>4. I am struggling to know how to parent my child, and it is interfering with my ability to
+                        handle life and experience happiness.</h4>
+                        <input type="radio" name="q4" value="0" required>Never
+                        <input type="radio" name="q4" value="1">Rarely
+                        <input type="radio" name="q4" value="2">Sometimes
+                        <input type="radio" name="q4" value="3">Often
+                        <input type="radio" name="q4" value="4">Nearly every day
+                    <h4>5. I am struggling in my relationship with my spouse/partner, and it is interfering with my
+                        ability to handle life and experience happiness.</h4>
+                        <input type="radio" name="q5" value="0" required>Never
+                        <input type="radio" name="q5" value="1">Rarely
+                        <input type="radio" name="q5" value="2">Sometimes
+                        <input type="radio" name="q5" value="3">Often
+                        <input type="radio" name="q5" value="4">Nearly every day
+                    <h4>6. I have difficulty maintaining relationships with people and find myself isolating and/or
+                        pushing people away.</h4>
+                        <input type="radio" name="q6" value="0" required>Never
+                        <input type="radio" name="q6" value="1">Rarely
+                        <input type="radio" name="q6" value="2">Sometimes
+                        <input type="radio" name="q6" value="3">Often
+                        <input type="radio" name="q6" value="4">Nearly every day
+                </div>
+                <br><br>
+
+                <div class="addiction">
+                    <h3>How often...</h3>
+                    <h4>7. Do you drink alcohol or use mind-altering substances?</h4>
+                        <input type="radio" name="q7" value="0" required>Never
+                        <input type="radio" name="q7" value="1">Rarely
+                        <input type="radio" name="q7" value="2">Monthly
+                        <input type="radio" name="q7" value="3">Weekly
+                        <input type="radio" name="q7" value="4">Daily
+                    <h4>8. Have family, friends, or anyone else expressed concern over your alcohol/drug usage?</h4>
+                        <input type="radio" name="q8" value="0" required>Never
+                        <input type="radio" name="q8" value="1">Rarely
+                        <input type="radio" name="q8" value="2">Sometimes
+                        <input type="radio" name="q8" value="3">Often
+                        <input type="radio" name="q8" value="4">Nearly every day
+                    <h4>9. Have you tried to control your alcohol/drug usage and had difficulty doing so?</h4>
+                        <input type="radio" name="q9" value="0" required>Never
+                        <input type="radio" name="q9" value="1">Rarely
+                        <input type="radio" name="q9" value="2">Sometimes
+                        <input type="radio" name="q9" value="3">Often
+                        <input type="radio" name="q9" value="4">Nearly every day
+                        <br><br><br><br>
+                </div>
+                <button id="submitButton" class="btn" onclick="submitForm()" type="button" value="Submit">Find My Therapist</button>
+            </form>
+        </div>
+        <br><br>
+        <script src="../js/components/questionnaireData.js"></script>
 </body>
+
 </html>
