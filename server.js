@@ -40,6 +40,14 @@ app.get('/profile', function(req, res){
   res.render("profile");
 })
 
+app.get('/submission', function(req,res){
+  res.render("submission");
+})
+
+app.get('/about', function(req,res){
+  res.render("about");
+})
+
 // Database setup
 const mongoose = require("mongoose");
 
@@ -91,7 +99,7 @@ app.post('/register', function(req,res){
     if(err){
       console.log(err);
     }else{
-      res.render("login");
+      res.render("submission");
     }
   })
 })
