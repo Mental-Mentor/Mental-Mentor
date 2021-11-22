@@ -1,0 +1,64 @@
+.abouthero {
+    background-image: url(../images/about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 600px;
+    margin:0px;
+}
+
+.heading {
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+     text-align: center;
+     padding: 20px;
+     max-width: 1000px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 30px;
+     margin-bottom: 30px;
+}
+
+.mem-container {
+    background-color:#F3E0F4;
+    padding: 30px;
+    text-align: center;
+}
+/* member card */
+@media (min-width: 600px) and (max-width: 1100px) {
+    .member {
+        background-color:#F3E0F4;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-gap: 10px;
+    }
+  }
+  
+  /***** Blogs Grid Large screens ****/
+  
+  @media (min-width: 1100px) {
+    .member {
+        background-color:#F3E0F4;
+      display: grid;
+      grid-template-columns: 20% 20% 20% 20%;
+      grid-template-rows: 50% 50%;
+      grid-gap: 10px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  }

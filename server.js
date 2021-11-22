@@ -40,6 +40,18 @@ app.get('/profile', function(req, res){
   res.render("profile");
 })
 
+app.get('/submission', function(req,res){
+  res.render("submission");
+})
+
+app.get('/about', function(req,res){
+  res.render("about");
+})
+
+app.get('/therapistRegister', function(req,res){
+  res.render("therapistRegister");
+})
+
 // Database setup
 const mongoose = require("mongoose");
 
@@ -67,7 +79,7 @@ const userSchema = {
     state: String,
     zipcode: Number
 }
-//console.log(userSchema);
+
 
 const User = new mongoose.model('User',userSchema);
 
@@ -91,29 +103,42 @@ app.post('/register', function(req,res){
     if(err){
       console.log(err);
     }else{
-      res.render("login");
+      res.render("submission");
     }
   })
 })
 
-app.post("/login", function(req,res){
+
+app.post("/login", function (req, res) {
   const username = req.body.username;
   const password = req.body.password;
-
-  User.find(function(err, users){
-    if(err){
-        console.log(err);
-    }else {
-        users.forEach(function(user){
-            if(user.email == username && user.password == password){
-                console.log(user.email);
-                res.render("profile");
-            }
-            
-        })
-        
+  User.findOne({ email: username }, function (err, foundUser) {
+    if (err) {
+      console.log(err);
+      res.send('Username is wrong');
+    } else {
+      if (foundUser) {
+        if (foundUser.password === password) {
+          userId = foundUser.id;
+          userFirstname = foundUser.firstName;
+          userLastName = foundUser.lastName;
+          userPhoneNo = foundUser.phoneNo;
+          userDob = foundUser.dob;
+          userAddress1 = foundUser.address1;
+          userAddress2 = foundUser.address2;
+          userCity = foundUser.city;
+          userState = foundUser.state;
+          userZipcode = foundUser.zip;
+          res.render('profile', {firstName: userFirstname, lastName: userLastName, address1: userAddress1,
+            address2: userAddress2, city: userCity, state: userState, zipcode: userZipcode
+        });
+        }
+      }
     }
-})
+  });
+  
+});
 
-})
+
+
 
