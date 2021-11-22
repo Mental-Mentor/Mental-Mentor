@@ -48,6 +48,10 @@ app.get('/about', function(req,res){
   res.render("about");
 })
 
+app.get('/therapistRegister', function(req,res){
+  res.render("therapistRegister");
+})
+
 // Database setup
 const mongoose = require("mongoose");
 
