@@ -95,7 +95,7 @@ body {
     background-color: #F3E0F4;
 }
 
-@media only screen and (max-width: 2720px) {
+@media only screen and (max-width: 500px) {
     body {
         background-color: #FDF9FD;
         font-family: 'Nunito', sans-serif;
