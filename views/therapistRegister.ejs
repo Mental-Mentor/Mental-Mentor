@@ -5,14 +5,17 @@
     <!-- responsive meta tag to tell the browser to adjust the page automatic according to screen size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mental-Mentor Register Page></title>
-    <script src="../js/components/register.js"></script>
+    <!-- <script src="../js/components/register.js"></script> -->
+    <!-- for styling using the same css file for User Ragister -->
     <link rel="stylesheet" href="../styles/register.css" />
   </head>
 
   <body>
-    <form id="register" method="post" onsubmit=" return ValidationEvent()">
+    <form id="therapistRegister" method="post">
+      <!-- onsubmit=" return ValidationEvent(therapistRegister)" -->
+
       <div class="container">
-        <h1>Register</h1>
+        <h1>Therapist Register</h1>
         <p>Please fill in this form to create an account.</p>
         <hr />
 
@@ -74,6 +77,25 @@
 
         <label for="bDay"><b>Date of Birth</b></label>
         <input type="date" name="bDay" id="bDay" value="2021-09-21" required />
+
+        <label for="category"><b>Category of Therapy</b></label>
+        <select name="category" id="category" required>
+          <option value="Mood">Mood(Depression/Anxiety)</option>
+          <option value="Family">Family</option>
+          <option value="Addiction">Addiction</option>
+          <option value="All(Mood,Family,Addiction)">
+            All(Mood,Family,Addiction)
+          </option>
+        </select>
+
+        <label for="experience"><b>Years of Experience</b></label>
+        <input
+          type="text"
+          placeholder="Enter Years of Experience"
+          name="experience"
+          id="experience"
+          required
+        />
 
         <label for="add1"><b>Address Line 1</b></label>
         <input
