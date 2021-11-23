@@ -4,40 +4,8 @@ body {
     margin: 0px;
 }
 
-
-/* Style for home page  */
-
-.responsive-intro {
-    border: 3px solid #72DDF7;
-    width: 35%;
-    height: 20%;
-    margin-top: 16em;
-    margin-right: 10em;
-    float: right;
-}
-
-.questionnaire {
-    margin-left: 30em;
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: none;
-    background-color: #72DDF7;
-    margin-top: 20px;
-    margin-right: 2em;
-    float: right;
-    cursor: pointer;
-}
-
-.questionnaire:hover {
-    border: 2px solid #72DDF7;
-    background-color: #F3E0F4;
-}
-
-
-/* images on home page */
-
-.imgone {
-    background-image: url(../images/TherapistOne.jpg);
+.abouthero {
+    background-image: url(../images/My\ Post\ \(40\).jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -46,35 +14,60 @@ body {
     margin: 0px;
 }
 
-
-/* text on top of home page */
-
-.info-h1 {
-    color: white;
-    text-shadow: 2px 2px black;
-    font-size: 70px;
-    position: absolute;
-    top: 25%;
-    left: 15%;
-    transform: translate(-50%, -50%);
-}
-
-.info-p {
-    color: white;
-    text-shadow: 2px 2px black;
-    font-size: 40px;
+.herocontent {
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    border: solid 6px #fff;
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.35);
+    margin: 1rem auto;
+    max-width: 50%;
+    padding: 5vw 5vw;
 }
 
-.responsive {
-    width: 40%;
-    height: auto;
-    margin-top: 5em;
-    margin-left: 5em;
-    float: left;
+.heading {
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abouthero2 {
+    background-image: url(../images/My\ Post\ \(41\).jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    height: 600px;
+    margin: 0px;
+}
+
+.herocontent2 {
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+    border: solid 6px #fff;
+    box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.35);
+    margin: 1rem auto;
+    max-width: 50%;
+    padding: 30px;
+}
+
+.heading2 {
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn {
@@ -92,66 +85,12 @@ body {
     background-color: #F3E0F4;
 }
 
-
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-
-@media screen and (min-width: 601px) {
-    .img-p {
-        font-size: 80px;
-    }
-}
-
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-
-@media screen and (max-width: 600px) {
-    .img-p {
-        font-size: 30px;
-    }
-}
-
-
-/* Style the button and place it in the middle of the container/image */
-
-.container .btn {
-    position: absolute;
-    top: 75%;
-    left: 7%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: navy;
-    font-size: 16px;
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: none;
-    background-color: #72DDF7;
-    float: right;
-    cursor: pointer;
-    display: flex;
-}
-
-.container .btn:hover {
-    border: 2px solid #72DDF7;
-    background-color: #F3E0F4;
-}
-
-.container .bnt-register {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    color: navy;
-    font-size: 16px;
-    padding: 10px 25px;
-    border-radius: 10px;
-    border: none;
-    background-color: #72DDF7;
-    float: right;
-    cursor: pointer;
-    margin-left: 26em;
-    margin-top: 2em;
-}
-
-.container .bnt-register:hover {
-    border: 2px solid #72DDF7;
-    background-color: #F3E0F4;
+.content {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
