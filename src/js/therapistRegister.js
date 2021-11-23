@@ -10,9 +10,10 @@ function ValidationEvent() {
   var repsw = document.getElementById("register").repassword;
   var phone = document.getElementById("register").phone;
   var zip = document.getElementById("register").zip;
+  // var category = document.getElementById(formId).category;
+  var exp = document.getElementById(formId).exp;
 
   // call the vaidate functions for corresponding fields and if all of them true return true
-  console.log("validation for firstname", fNameValiadte(fName));
   if (
     fNameValiadte(fName) === true &&
     lNameValiadte(lName) === true &&
@@ -100,6 +101,17 @@ const zipValidate = (zip) => {
     document.getElementById("error").innerHTML =
       "  * Zip Code should be 5 numbers";
     zip.focus();
+    return false;
+  } else return true;
+};
+
+// Valiadate Therapist experience as only numbers
+const expValidate = (exp) => {
+  var reg = /^[0-9]*$/;
+  if (reg.test(exp.value) === false) {
+    document.getElementById("error").innerHTML =
+      "  * Experience shpould be only numbers";
+    exp.focus();
     return false;
   } else return true;
 };

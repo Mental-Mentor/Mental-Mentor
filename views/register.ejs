@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../styles/register.css" />
   </head>
 
-  <body>
+  <body style="background-image: url(../images/TherapistOne.jpg)">
     <form id="register" method="post" onsubmit=" return ValidationEvent()">
       <div class="container">
         <h1>Register</h1>
-        <p>Please fill in this form to create an account.</p>
+        <p>Please complete this form to create an account.</p>
         <hr />
 
         <p style="color: red" id="error"></p>
@@ -107,11 +107,13 @@
       </div>
 
       <div class="container signin">
-        <p>
-          Are you a Therapist? Then register here
-          <a href="/therapistRegister">Therapst Register</a>.
+        <p style="text-align: center">
+          Are you a Therapist? Register
+          <a href="/therapistRegister">here</a>.
         </p>
-        <p>Already have an account? <a href="/login">Log In</a>.</p>
+        <p style="text-align: center">
+          Already have an account? <a href="/login">Log In</a>.
+        </p>
       </div>
     </form>
   </body>
