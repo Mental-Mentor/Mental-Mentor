@@ -1,8 +1,8 @@
-function ValidationEvent(formId) {
+function ValidationEvent() {
   //clear out the last error message
-  console.log("call the validation for the form ", formId);
   document.getElementById("error").innerHTML = "";
 
+  let formId = "register";
   // Storing commomn Field Values In Variables from both register page
   var fName = document.getElementById(formId).fName;
   var lName = document.getElementById(formId).lName;
@@ -14,23 +14,29 @@ function ValidationEvent(formId) {
 
   // Storing Field Values In Variables from Therapist register page
   // var category = document.getElementById(formId).category;
-  var exp = document.getElementById(formId).exp;
+  // var exp = document.getElementById(formId).exp;
 
-  // call the vaidate functions for corresponding fields and if all of them true rerun true
+  // call the vaidate functions for corresponding fields and if all of them true return true
 
   //for the user register form
   if ((formId = "register")) {
+    console.log("form", formId);
+    console.log("fvalidation for firstname", fNameValiadte(fName));
     if (
-      fNameValiadte(fName) &&
-      lNameValiadte(lName) &&
-      emailValidate(email) &&
-      pswValidate(psw) &&
-      repswMatch(psw, repsw) &&
-      phoneValidate(phone) &&
-      zipValidate(zip)
+      fNameValiadte(fName) === true &&
+      lNameValiadte(lName) === true &&
+      emailValidate(email) === true &&
+      pswValidate(psw) === true &&
+      repswMatch(psw, repsw) === true &&
+      phoneValidate(phone) === true &&
+      zipValidate(zip) === true
     ) {
+      console.log("pass all validations");
       return true;
-    } else return false;
+    } else {
+      console.log("didn't pass all validtions");
+      return false;
+    }
   }
 
   //   expValidate(exp);
