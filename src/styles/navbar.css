@@ -32,16 +32,6 @@
      text-shadow: 1px 1px black;
  }
  
- .slogan {
-     font-family: Arial, Helvetica, sans-serif;
-     font-size: small;
-     text-shadow: 1px 1px #72DDF7;
- }
- 
- .name {
-     color: black;
- }
- 
  .start {
      padding: 10px 25px;
      border-radius: 10px;
@@ -52,9 +42,27 @@
      margin-top: 30px;
      margin-right: 3px;
      height: 40px;
+     color: navy;
  }
  
  .start:hover {
      border: 2px solid #72DDF7;
      background-color: #F3E0F4;
  }
+ /*  
+ .profile {
+     padding: 10px 25px;
+     border-radius: 10px;
+     border: none;
+     background-color: #72DDF7;
+     cursor: pointer;
+     margin-top: 30px;
+     margin-right: 3px;
+     height: 40px;
+     color: navy;
+ }
+ 
+ .profile:hover {
+     border: 2px solid #72DDF7;
+     background-color: #F3E0F4;
+ } */
