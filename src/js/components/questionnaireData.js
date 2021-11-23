@@ -89,18 +89,21 @@ function totalScores() {
     let familyScore = q4 + q5 + q6;
     let addictionScore = q7 + q8 + q9;
 
-    if (moodScore > 10) {
-        console.log("match patient to mood disorder therapist");
-        // include mood category in request to backend for therapists
-    }
+    let scoreArray = [moodScore, familyScore, addictionScore];
+    scoreArray.sort((a, b) => (a - b));
+    console.log(`moodScore: ${moodScore}, familyScore: ${familyScore}, addictionScore: ${addictionScore}`);
+    console.log("ScoreArray sorted: " + scoreArray);
 
-    if (familyScore > 10) {
-        console.log("match patient to family therapist");
-        // include family category in request to backend for therapists
+    if (scoreArray[1] == scoreArray[2]) {
+        console.log("return All Therapist");
     }
-
-    if (addictionScore > 10 || q7 == 4) {
-        console.log("match patient to substance abuse therapist");
-        // include addiction category in request to backend for therapists
+    else if (scoreArray[2] == moodScore) {
+        console.log("return Mood Therapist");
+    }
+    else if (scoreArray[2] == familyScore) {
+        console.log("return Family Therapist");
+    }
+    else if (scoreArray[2] == addictionScore) {
+        console.log("return Addiction Therapist");
     }
 }
