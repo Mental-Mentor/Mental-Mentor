@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
   </head>
   <body>
     <%- include('mainHeader'); -%>
@@ -14,92 +15,87 @@
       <div class="herocontent">
         <h1 class="heading">Therapist</h1>
         <h2 class="heading" style="padding-top:10px">Create your digital platform to connect with your patients</h2>
-        <a href="/therapistRegister" ><button class="btn" style="margin-top:10px">REGISTER</button></a>
-        <a href="/therapistLogin" ><button class="btn" style="margin-top:10px">LOGIN</button></a>
+        <a href="/therapistRegister" ><button class="button" style="margin-top:10px">REGISTER</button></a>
+        <a href="/therapistLogin" ><button class="button" style="margin-top:10px">LOGIN</button></a>
       </div>
     </div>
     <div class="content">
       <div class="image">
-          <img src="../images/therapist.jpg" alt="therapist" width="300" height="500">
+          <img src="../images/Register.jpg" alt="therapist" width="300" height="500">
       </div>
       <div class="how">
-        <h2 style="font-size: 40px">How It Works</h2>
-        <p style="font-size: 30px">
-          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Create your account<br>
-          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Matched patients with your category will be sent<br>
-          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Connect with them through our platform<br>
-        </p>
-        <a href="/therapistRegister"><button class="btn">REGISTER</button></a>
+        <h2 style="font-size: 30px">How It Works</h2>
+       
+        
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Register</div>
+              Create your account with us
+            </div>
+            
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Receive notification</div>
+              Matched patients with your category will be sent
+            </div>
+            
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Connect</div>
+              Connect with them through our platform
+            </div>
+            
+          </li>
+        </ol>
+        <a href="/therapistRegister"><button class="button" style="margin-left:10px; margin-top:10px">REGISTER</button></a>
       </div>
     </div>
     <div class="mem-container">
         <h2>OUR THERAPISTS</h2>
-    <div class="member">
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/therapist-1.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Therapist one</h5>
-          <p class="card-text">
-           Mental Health
-          </p>
-          
+        <h3>Consult With Our Best Therapist And Get Solved</h3>
+    
+    <div class="row row-cols-1 row-cols-md-2 g-4" style="max-width:1000px; margin-left:auto; margin-right:auto; margin-top:10px">
+      <div class="col">
+        <div class="card">
+          <img src="../images/therapist-1.jpg" class="card-img-top" alt="..."width="200" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/therapist-2.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Therapist Two</h5>
-          <p class="card-text">
-            Psychiatry
-          </p>
-         
+      <div class="col">
+        <div class="card">
+          <img src="../images/therapist-2.jpg" class="card-img-top" alt="..."width="200" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/therapist-3.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Therapist Two</h5>
-          <p class="card-text">
-            DEVELOPER
-          </p>
-         
+      <div class="col">
+        <div class="card">
+          <img src="../images/therapist-3.jpg" class="card-img-top" alt="..."width="200" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          </div>
         </div>
       </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/therapist-4.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Nichole Ezell</h5>
-          <p class="card-text">
-           DEVELOPER
-          </p>
-          
+      <div class="col">
+        <div class="card">
+          <img src="../images/therapist-4.jpg" class="card-img-top" alt="..."width="200" height="300">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          </div>
         </div>
       </div>
     </div>
 </div>
+<script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
