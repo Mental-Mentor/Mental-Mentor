@@ -14,21 +14,7 @@ body{
 input {
     margin: 0 3px 0 15px;
 }
-.next {
-    padding: 10px 25px;
-    border-radius: 10px;
-    border:none;
-    background-color: #72DDF7;
-    margin-top: 20px;
-    float: right;
-    cursor: pointer;
-}
-.next:hover {
-    border: 2px solid #72DDF7;
-    background-color:  #F3E0F4;
-    
-}
-.btn {
+.button {
     color: navy;
     font-size: 16px;
     padding: 10px 25px;
@@ -36,7 +22,7 @@ input {
     border: none;
     background-color: #72DDF7;
 }
-.btn:hover {
+.button:hover {
     border: 2px solid #72DDF7;
     background-color: #F3E0F4;
 }
