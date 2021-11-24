@@ -60,6 +60,10 @@ app.get("/therapistRegister", function (req, res) {
   res.render("therapistRegister");
 });
 
+app.get("/therapistLogin", function (req, res) {
+  res.render("therapistLogin");
+});
+
 app.get("/therapist", function (req, res) {
   res.render("therapist");
 });
