@@ -3,17 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Questionnaire</title>
     <link rel="stylesheet" href="./styles/questionnaire.css" />
-    <link rel="stylesheet" href="./styles/navbar.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <%- include('mainHeader'); -%>
+    <%- include('navbarLoggedIn'); -%>
 
         <h1 id="error" class="error"></h1>
 
@@ -217,7 +216,7 @@
                     </div>
                     <br><br>
                 </div>
-                <button id="submitButton" class="btn" onclick="submitForm()" type="submit" >Find My
+                <button id="submitButton" class="button" onclick="submitForm()" type="submit" >Find My
                     Therapist</button>
                 <br><br>
             </form>
