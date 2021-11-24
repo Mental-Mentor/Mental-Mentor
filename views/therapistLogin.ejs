@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <!-- responsive meta tag to tell the browser to adjust the page automatic according to screen size -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental-Mentor Therapist Login Page></title>
+    <!-- <script src="../js/components/register.js"></script> -->
+    <!-- same styles as register page -->
+    <link rel="stylesheet" href="../styles/register.css" />
+  </head>
+
+  <body>
+    <form id="login" method="post">
+      <div class="container">
+        <h1>Therapist LogIn</h1>
+
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          name="username"
+          id="username"
+          required
+        />
+
+        <label for="password"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          id="password"
+          required
+        />
+
+        <button type="submit" class="loginbtn">Log In</button>
+      </div>
+
+      <div class="container register">
+        <p>Don't have an account? <a href="/therapistRegister">Register</a>.</p>
+      </div>
+    </form>
+  </body>
+</html>
