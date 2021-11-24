@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result</title>
+    <link rel="stylesheet" href="./styles/navbar.css" />
+    <link rel="stylesheet" href="./styles/results.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
+    <title>Profile</title>
 </head>
+
 <body>
-    Result
-    <%= firstName %>
+    <!-- Navbar - change this to logged in header later -->
+    <%- include('navbarLoggedIn'); -%>
+        <div class="container">
+            <h2>Based on your answers, we've matched you with the following therapist:</h2>
+            
+            <!-- Placeholder picture for therapist - update src later -->
+            <div class="image-container">
+                <img class="therapistPic"
+                    src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="therapistPic">
+            </div>
+
+            <!-- Display user data in profile -->
+            <div class="info-container">
+                <div class="therapistInfo">
+                    <p id="name"><span id="firstName"><%= firstName %> </span><span id="lastName"><%= lastName %></span></p>
+                    <p id="phone"><%= phoneNo %></p>
+                    <p id="category"><span id="category-span"><%= category %></span> Therapist - <span id="experience"><%= experience %> years' experience</span></p>
+                    <p id="address"><span id="address1"><%= address1 %></span><span id="address2">, <%= address2 %></span></p>
+                    <p id="cityStZip"><span id="city"><%= city %>, </span><span id="state"><%= state %> </span><span id="zip"><%= zipcode %></span></p>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <script src="../js/components/results.js"></script>
 </body>
+
 </html>
