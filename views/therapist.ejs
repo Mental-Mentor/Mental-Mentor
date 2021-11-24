@@ -11,22 +11,33 @@
   <body>
     <%- include('mainHeader'); -%>
     <div class="therapisthero">
-      <h1 class="heading">About Us</h1>
+      <div class="herocontent">
+        <h1 class="heading">Therapist</h1>
+        <h2 class="heading" style="padding-top:10px">Create your digital platform to connect with your patients</h2>
+        <a href="/therapistRegister" ><button class="btn" style="margin-top:10px">REGISTER</button></a>
+        <a href="/therapistLogin" ><button class="btn" style="margin-top:10px">LOGIN</button></a>
+      </div>
     </div>
     <div class="content">
-      <p style="font-size: 30px">
-        Founded by developers for a hackathon. Our platform help people get
-        matched with the right therapist.  Our mission is to help as
-        many people as possible to get access to their mental health.
-      </p>
-     
+      <div class="image">
+          <img src="../images/therapist.jpg" alt="therapist" width="300" height="500">
+      </div>
+      <div class="how">
+        <h2 style="font-size: 40px">How It Works</h2>
+        <p style="font-size: 30px">
+          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Create your account<br>
+          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Matched patients with your category will be sent<br>
+          <span><img src="../images/check.png" width="20px" height="20px" style="padding-right:10px"></span>Connect with them through our platform<br>
+        </p>
+        <a href="/therapistRegister"><button class="btn">REGISTER</button></a>
+      </div>
     </div>
     <div class="mem-container">
-        <h2>OUR TEAM</h2>
+        <h2>OUR THERAPISTS</h2>
     <div class="member">
       <div class="card" style="width: 18rem">
         <img
-          src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+          src="../images/therapist-1.jpg"
           class="card-img-top"
           alt="..."
           width="200px"
@@ -42,7 +53,7 @@
       </div>
       <div class="card" style="width: 18rem">
         <img
-          src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+          src="../images/therapist-2.jpg"
           class="card-img-top"
           alt="..."
           width="200px"
@@ -58,7 +69,7 @@
       </div>
       <div class="card" style="width: 18rem">
         <img
-          src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+          src="../images/therapist-3.jpg"
           class="card-img-top"
           alt="..."
           width="200px"
@@ -74,7 +85,7 @@
       </div>
       <div class="card" style="width: 18rem">
         <img
-          src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+          src="../images/therapist-4.jpg"
           class="card-img-top"
           alt="..."
           width="200px"

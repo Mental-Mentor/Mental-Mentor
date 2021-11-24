@@ -8,6 +8,15 @@ const app = express();
 app.set("view engine", "ejs");
 
 app.use(express.static("src"));
+app.use(
+  "/css",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/css"))
+)
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/bootstrap/dist/js"))
+)
+app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")))
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = 8000;
@@ -57,6 +66,10 @@ app.get("/therapist", function (req, res) {
 
 app.get("/results", function (req, res) {
   res.render("results");
+});
+
+app.get("/footer", function (req, res) {
+  res.render("footer");
 });
 // Database setup
 const mongoose = require("mongoose");
@@ -135,7 +148,8 @@ app.post("/login", function (req, res) {
           userAddress2 = foundUser.address2;
           userCity = foundUser.city;
           userState = foundUser.state;
-          userZipcode = foundUser.zip;
+          userZipcode = foundUser.zipcode;
+          
           res.render("profile", {
             firstName: userFirstname,
             lastName: userLastName,
