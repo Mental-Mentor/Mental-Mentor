@@ -1,7 +1,7 @@
 /* add a background Image*/
-body {
+.body {
   background-image: url(../images/therapist.jpg);
-  height: 100%;
+  /* height: 100%; */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fdf9fd;
@@ -12,10 +12,12 @@ body {
 /* setting a tranparent black color for the form  */
 
 form {
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* position: absolute; */
+  /* top: 70%; */
+  /* left: 50%; */
+  margin-left: auto;
+  margin-right: auto;
+  /* transform: translate(-50%, -50%); */
   color: #ffffff;
   text-align: left;
   border: solid 6px #fff;
