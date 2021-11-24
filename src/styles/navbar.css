@@ -49,6 +49,16 @@
      border: 2px solid #72DDF7;
      background-color: #F3E0F4;
  }
+ 
+ .link-about {
+     padding: 10px 25px;
+     float: left;
+     cursor: pointer;
+     margin-top: 30px;
+     margin-right: 3px;
+     height: 40px;
+     color: navy;
+ }
  /*  
  .profile {
      padding: 10px 25px;
