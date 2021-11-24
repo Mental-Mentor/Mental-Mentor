@@ -29,8 +29,7 @@ input {
     
 }
 .btn {
-    -ms-transform: translate(-50%, -50%);
-    color: white;
+    color: navy;
     font-size: 16px;
     padding: 10px 25px;
     border-radius: 10px;
