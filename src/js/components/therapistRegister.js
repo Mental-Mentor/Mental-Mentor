@@ -3,15 +3,15 @@ function ValidationEvent() {
   document.getElementById("error").innerHTML = "";
 
   // Storing commomn Field Values In Variables
-  var fName = document.getElementById("register").fName;
-  var lName = document.getElementById("register").lName;
-  var email = document.getElementById("register").email;
-  var psw = document.getElementById("register").password;
-  var repsw = document.getElementById("register").repassword;
-  var phone = document.getElementById("register").phone;
-  var zip = document.getElementById("register").zip;
-  // var category = document.getElementById(formId).category;
-  var exp = document.getElementById(formId).exp;
+  var fName = document.getElementById("therapistRegister").fName;
+  var lName = document.getElementById("therapistRegister").lName;
+  var email = document.getElementById("therapistRegister").email;
+  var psw = document.getElementById("therapistRegister").password;
+  var repsw = document.getElementById("therapistRegister").repassword;
+  var phone = document.getElementById("therapistRegister").phone;
+  var zip = document.getElementById("therapistRegister").zip;
+  // var category = document.getElementById("therapistRegister").category;
+  var exp = document.getElementById("therapistRegister").experience;
 
   // call the vaidate functions for corresponding fields and if all of them true return true
   if (
@@ -21,7 +21,8 @@ function ValidationEvent() {
     pswValidate(psw) === true &&
     repswMatch(psw, repsw) === true &&
     phoneValidate(phone) === true &&
-    zipValidate(zip) === true
+    zipValidate(zip) === true &&
+    expValidate(exp) === true
   ) {
     console.log("pass all validations");
     return true;
