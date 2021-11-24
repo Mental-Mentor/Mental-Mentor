@@ -1,19 +1,15 @@
-/* #72DDF7 - blue
-#F3E0F4 - pink
-#FDF9FD - light pink */
-
 /* add a background Image*/
 body {
-  background-image: url(../images/TherapistOne.jpg);
-  background-repeat: no-repeat;
+  background-image: url(../images/therapist.jpg);
   height: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: left top;
+  background-color: #fdf9fd;
   padding: 50px;
   background-attachment: fixed;
 }
 
-/* resizing the image to fit the window */
+/* setting a tranparent black color for the form  */
 
 form {
   position: absolute;
@@ -34,6 +30,12 @@ form {
   box-sizing: border-box;
 }
 
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: transparent;
+}
+
 /* Full-width input fields */
 input[type="text"],
 input[type="password"],
@@ -50,7 +52,8 @@ select {
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+select:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -67,8 +70,8 @@ button {
   color: navy;
   padding: 16px 20px;
   margin: 8px 0;
-  border: none;
   border-radius: 10px;
+  border: none;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -88,7 +91,7 @@ a {
 .register {
   background-color: #f3e0f4;
   text-align: center center;
-  padding: 10px;
+  padding: 16px;
   color: black;
   border-radius: 10px;
 }
