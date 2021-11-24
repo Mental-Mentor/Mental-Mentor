@@ -5,9 +5,10 @@
     <!-- responsive meta tag to tell the browser to adjust the page automatic according to screen size -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mental-Mentor Therapist Register Page></title>
-    <script src="../js/components/therapistRegister.js"></script>
-    <!-- for styling using the same css file for User Ragister -->
+
+    <!-- for styling  -->
     <link rel="stylesheet" href="../styles/therapistRegister.css" />
+    <!-- to include bootstrap styling -->
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
   </head>
   <body>
@@ -147,17 +148,18 @@
 
         <div class="container signin">
           <p style="text-align: center">
-            Not a Therapist? Register
-            <a href="/register">here</a>.
+            Not a Therapist?
+            <a href="/register">Register Here</a>
           </p>
           <p style="text-align: center">
             Already have a Therapist account?
-            <a href="/therapistLogin">Log In</a>.
+            <a href="/therapistLogin">Login</a>
           </p>
         </div>
       </form>
     </div>
     <%- include('footer'); -%>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="../js/components/therapistRegister.js"></script>
   </body>
 </html>

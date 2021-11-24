@@ -1,7 +1,7 @@
 /* add a background Image*/
 .body {
-  background-image: url(../images/therapist.jpg);
   /* height: 100%; */
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fdf9fd;
@@ -12,12 +12,8 @@
 /* setting a tranparent black color for the form  */
 
 form {
-  /* position: absolute; */
-  /* top: 70%; */
-  /* left: 50%; */
   margin-left: auto;
   margin-right: auto;
-  /* transform: translate(-50%, -50%); */
   color: #ffffff;
   text-align: left;
   border: solid 6px #fff;
@@ -34,7 +30,7 @@ form {
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  padding: 20px;
   background-color: transparent;
 }
 
@@ -50,6 +46,16 @@ select {
   background: #f3e0f4;
   border: 1px solid;
   border-radius: 10px;
+  /* color: internal-light-dark(black, white); */
+}
+
+/* to apply padding in chrome */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  margin: 5px 0 22px 0;
 }
 
 input[type="text"]:focus,
@@ -62,7 +68,7 @@ select:focus {
 
 /* Overwrite default styles of hr */
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid black;
   margin-bottom: 25px;
 }
 
@@ -73,7 +79,7 @@ button {
   padding: 16px 20px;
   margin: 8px 0;
   border-radius: 10px;
-  border: none;
+  /* border: none; */
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -93,14 +99,29 @@ a {
 .register {
   background-color: #f3e0f4;
   text-align: center center;
-  padding: 16px;
+  padding: 10px;
+  margin: 5px 0 22px 0;
   color: black;
   border-radius: 10px;
 }
 
 /* for responsive screen */
 @media screen and (max-width: 425px) {
+  .body {
+    padding: 5px;
+    background-image: url(../images/therapist-1.jpg);
+  }
   form {
     max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .body {
+    padding: 50px;
+    background-image: url(../images/therapist.jpg);
+  }
+  form {
+    max-width: 50%;
   }
 }

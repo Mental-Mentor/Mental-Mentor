@@ -3,23 +3,27 @@
 #FDF9FD - light pink */
 
 /* add a background Image*/
-body {
+.body {
   background-image: url(../images/TherapistOne.jpg);
   background-repeat: no-repeat;
   height: 100%;
   background-size: cover;
-  background-position: left top;
+  background-position: center center;
   padding: 50px;
   background-attachment: fixed;
+  background-color: #fdf9fd;
 }
 
 /* resizing the image to fit the window */
 
 form {
+  /* changed to include navbar
   position: absolute;
   top: 70%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
+  margin-left: auto;
+  margin-right: auto;
   color: #ffffff;
   text-align: left;
   border: solid 6px #fff;
@@ -32,6 +36,12 @@ form {
 
 * {
   box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 20px;
+  /* background-color: transparent; */
 }
 
 /* Full-width input fields */
@@ -67,8 +77,8 @@ button {
   color: navy;
   padding: 16px 20px;
   margin: 8px 0;
-  border: none;
   border-radius: 10px;
+  border: 1px solid;
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -94,8 +104,23 @@ a {
 }
 
 /* for responsive screen */
+/* for mobiles */
 @media screen and (max-width: 425px) {
+  .body {
+    padding: 5px;
+    background-image: url(../images/therapist-2.jpg);
+  }
   form {
     max-width: 100%;
+  }
+}
+/* for bigger screen */
+@media screen and (min-width: 768px) {
+  .body {
+    padding: 50px;
+    background-image: url(../images/TherapistOne.jpg);
+  }
+  form {
+    max-width: 50%;
   }
 }
