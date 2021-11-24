@@ -117,7 +117,7 @@ padding: 30px;
     }
   }
 
-  .btn {
+  .button {
     -ms-transform: translate(-50%, -50%);
     color: navyblue;
     font-size: 16px;
@@ -127,7 +127,7 @@ padding: 30px;
     background-color: #72DDF7;
     cursor: pointer;
 }
-.btn:hover {
+.button:hover {
     border: 2px solid #72DDF7;
     background-color: #F3E0F4;
 }
@@ -136,3 +136,6 @@ padding: 30px;
   text-align: left;
 }
 
+.list-group-item {
+  border: none !important;
+}

@@ -6,6 +6,7 @@
     <title>About</title>
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/about.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
   </head>
   <body>
     <%- include('navbar'); -%>
@@ -27,72 +28,45 @@
     </div>
     <div class="mem-container">
         <h2>OUR TEAM</h2>
-    <div class="member">
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/faith.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Faith Magras</h5>
-          <p class="card-text">
-            DEVELOPER
-          </p>
-          
+        <div class="row row-cols-1 row-cols-md-2 g-4" style="max-width:1000px; margin-left:auto; margin-right:auto; margin-top:10px">
+          <div class="col">
+            <div class="card">
+              <img src="../images/faith.jpg" class="card-img-top" alt="..."width="200" height="300">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/Uma_pic.jpg" class="card-img-top" alt="..."width="200" height="300">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/ruchi.PNG" class="card-img-top" alt="..."width="200" height="300">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="../images/nicholle.jpg" class="card-img-top" alt="..."width="200" height="300">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/Uma_pic.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Umapreethi Santhanakrishnan</h5>
-          <p class="card-text">
-            DEVELOPER
-          </p>
-         
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/ruchi.PNG"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Ruchibrata Kundu</h5>
-          <p class="card-text">
-            DEVELOPER
-          </p>
-         
-        </div>
-      </div>
-      <div class="card" style="width: 18rem">
-        <img
-          src="../images/nicholle.jpg"
-          class="card-img-top"
-          alt="..."
-          width="200px"
-          height="200px"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Nichole Ezell</h5>
-          <p class="card-text">
-           DEVELOPER
-          </p>
-          
-        </div>
-      </div>
-    </div>
 </div>
+<script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

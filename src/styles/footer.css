@@ -1,0 +1,25 @@
+.icon {
+    height: 30px;
+    width: 30px;        
+    padding: 5px;
+
+}
+.icon-container {
+    justify-content: right;
+    display: inline-block;
+}
+.links-container {
+    justify-content: right;
+}
+.bottom-div {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: #F3E0F4;
+}
+.bottom-container {
+    background-color: #F3E0F4;
+}
+.about-us {
+    padding: 10px;
+}

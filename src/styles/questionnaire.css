@@ -5,6 +5,9 @@ body{
     margin: 0px;
     text-align: center;
 }
+h2 {
+    text-align: center;
+}
 #quiz-container{
     background-color:#F3E0F4;
     margin: 0 10% 5px 10%;
