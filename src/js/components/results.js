@@ -11,3 +11,8 @@ let phonePart3 = phoneSplitArray[6] + phoneSplitArray[7] + phoneSplitArray[8] + 
 
 // display in phone number format
 document.getElementById("phone").innerHTML = `(${phonePart1})${phonePart2}-${phonePart3}`;
+
+// capitalize first letter of returned category
+let category = document.getElementById("category-span").innerHTML;
+let categoryCapitalized = category.charAt(0).toUpperCase() + category.slice(1);
+document.getElementById("category-span").innerHTML = categoryCapitalized;
