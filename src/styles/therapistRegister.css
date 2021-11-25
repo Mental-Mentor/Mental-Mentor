@@ -1,27 +1,17 @@
-/* #72DDF7 - blue
-#F3E0F4 - pink
-#FDF9FD - light pink */
-
 /* add a background Image*/
 .body {
-  background-image: url(../images/TherapistOne.jpg);
-  background-repeat: no-repeat;
-  height: 100%;
-  background-size: cover;
+  /* height: 100%; */
   background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fdf9fd;
   padding: 50px;
   background-attachment: fixed;
-  background-color: #fdf9fd;
 }
 
-/* resizing the image to fit the window */
+/* setting a tranparent black color for the form  */
 
 form {
-  /* changed to include navbar
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   margin-left: auto;
   margin-right: auto;
   color: #ffffff;
@@ -41,7 +31,7 @@ form {
 /* Add padding to containers */
 .container {
   padding: 20px;
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 
 /* Full-width input fields */
@@ -56,18 +46,29 @@ select {
   background: #f3e0f4;
   border: 1px solid;
   border-radius: 10px;
+  /* color: internal-light-dark(black, white); */
+}
+
+/* to apply padding in chrome */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 10px;
+  margin: 5px 0 22px 0;
 }
 
 input[type="text"]:focus,
 input[type="password"]:focus,
-input[type="date"]:focus {
+input[type="date"]:focus,
+select:focus {
   background-color: #ddd;
   outline: none;
 }
 
 /* Overwrite default styles of hr */
 hr {
-  border: 1px solid #f1f1f1;
+  border: 1px solid black;
   margin-bottom: 25px;
 }
 
@@ -78,7 +79,7 @@ button {
   padding: 16px 20px;
   margin: 8px 0;
   border-radius: 10px;
-  border: 1px solid;
+  /* border: none; */
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
@@ -99,26 +100,26 @@ a {
   background-color: #f3e0f4;
   text-align: center center;
   padding: 10px;
+  margin: 5px 0 22px 0;
   color: black;
   border-radius: 10px;
 }
 
 /* for responsive screen */
-/* for mobiles */
 @media screen and (max-width: 425px) {
   .body {
     padding: 5px;
-    background-image: url(../images/therapist-2.jpg);
+    background-image: url(../images/therapist-1.jpg);
   }
   form {
     max-width: 100%;
   }
 }
-/* for bigger screen */
+
 @media screen and (min-width: 768px) {
   .body {
     padding: 50px;
-    background-image: url(../images/TherapistOne.jpg);
+    background-image: url(../images/therapist.jpg);
   }
   form {
     max-width: 50%;
