@@ -1,4 +1,5 @@
 // Express to run server and routes
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -74,15 +75,15 @@ app.get("/results", function (req, res) {
   res.render("results");
 });
 
-app.get("/footer", function (req, res) {
-  res.render("footer");
+app.get("/therapistLogin", function (req, res) {
+  res.render("therapistLogin");
 });
 // Database setup
 
+const uri = process.env.URI;
 mongoose
   .connect(
-    "mongodb+srv://root:root@cluster0.ejtkg.mongodb.net/mental_mentor_db?retryWrites=true&w=majority",
-    { useNewUrlParser: true }
+    uri, { useNewUrlParser: true }
   )
   .then(() => {
     console.log("MONGO CONNECTION OPEN");
@@ -107,8 +108,8 @@ const userSchema = new mongoose.Schema({
   zipcode: Number,
 });
 
-const secret = "Thisisourlittlesecret";
-userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password', 'repassword']});
+
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password', 'repassword']});
 
 const User = new mongoose.model("User", userSchema);
 
@@ -150,6 +151,7 @@ app.post("/login", function (req, res) {
           userId = foundUser.id;
           userFirstname = foundUser.firstName;
           userLastName = foundUser.lastName;
+          userEmail = foundUser.email;
           userPhoneNo = foundUser.phoneNo;
           userDob = foundUser.dob;
           userAddress1 = foundUser.address1;
@@ -161,6 +163,7 @@ app.post("/login", function (req, res) {
           res.render("profile", {
             firstName: userFirstname,
             lastName: userLastName,
+            email: userEmail,
             phoneNo: userPhoneNo,
             dob: userDob,
             address1: userAddress1,
@@ -218,6 +221,7 @@ app.post("/questionnaire", function (req, res) {
       if (foundTherapist) {
         therapistFirstname = foundTherapist.firstName;
         therapistLastName = foundTherapist.lastName;
+        therapistEmail = foundTherapist.email;
         therapistPhoneNo = foundTherapist.phoneNo;
         therapistDob = foundTherapist.dob;
         therapistCategory = foundTherapist.category;
@@ -231,6 +235,7 @@ app.post("/questionnaire", function (req, res) {
         res.render("results", {
           firstName: therapistFirstname,
           lastName: therapistLastName,
+          email: therapistEmail,
           phoneNo: therapistPhoneNo,
           dob: therapistDob,
           category: therapistCategory,
@@ -307,6 +312,7 @@ app.post("/therapistLogin", function (req, res) {
         if (foundTherapist.password === password) {
           therapistFirstname = foundTherapist.firstName;
         therapistLastName = foundTherapist.lastName;
+        therapistEmail = foundTherapist.email;
         therapistPhoneNo = foundTherapist.phoneNo;
         therapistDob = foundTherapist.dob;
         therapistCategory = foundTherapist.category;
@@ -320,6 +326,7 @@ app.post("/therapistLogin", function (req, res) {
           res.render("profile", {
             firstName: therapistFirstname,
             lastName: therapistLastName,
+            email: therapistEmail,
             phoneNo: therapistPhoneNo,
             dob: therapistDob,
             category: therapistCategory,
