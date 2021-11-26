@@ -86,7 +86,7 @@ app.get("/therapistLogin", function (req, res) {
 const uri = process.env.URI;
 mongoose
   .connect(
-    "mongodb+srv://root:root@cluster0.ejtkg.mongodb.net/mental_mentor_db?retryWrites=true&w=majority", { useNewUrlParser: true }
+    uri, { useNewUrlParser: true }
   )
   .then(() => {
     console.log("MONGO CONNECTION OPEN");
@@ -111,8 +111,8 @@ const userSchema = new mongoose.Schema({
   zipcode: Number,
 });
 
-const secret = "Thisisourlittlesecret";
-userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password', 'repassword']});
+
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password', 'repassword']});
 
 const User = new mongoose.model("User", userSchema);
 
