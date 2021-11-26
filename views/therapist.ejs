@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Therapist</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/navbar.css" />
+    
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
   </head>
   <body>
-    <%- include('mainHeader'); -%>
+    <%- include('navbar'); -%>
     <div class="therapisthero">
       <div class="herocontent">
         <h1 class="heading">Therapist</h1>
@@ -31,21 +31,21 @@
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
               <div class="fw-bold">Register</div>
-              Create your account with us
+              Create an account with us
             </div>
             
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
               <div class="fw-bold">Receive notification</div>
-              Matched patients with your category will be sent
+              Receive notification when patients are ready to schedule with you
             </div>
             
           </li>
           <li class="list-group-item d-flex justify-content-between align-items-start">
             <div class="ms-2 me-auto">
               <div class="fw-bold">Connect</div>
-              Connect with them through our platform
+              Connect with patients online using our platform
             </div>
             
           </li>
@@ -96,6 +96,7 @@
       </div>
     </div>
 </div>
+<%- include('footer'); -%>
 <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>
