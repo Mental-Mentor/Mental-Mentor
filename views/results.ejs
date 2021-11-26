@@ -12,18 +12,15 @@
 </head>
 
 <body>
-    <!-- Navbar - change this to logged in header later -->
     <%- include('navbarLoggedIn'); -%>
         <div class="container">
             <h2>Based on your answers, we've matched you with the following therapist:</h2>
             
-            <!-- Placeholder picture for therapist - update src later -->
             <div class="image-container">
                 <img class="therapistPic"
                     src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png" alt="therapistPic">
             </div>
 
-            <!-- Display user data in profile -->
             <div class="info-container">
                 <div class="therapistInfo">
                     <h3 id="name"><span id="firstName"><%= firstName %> </span><span id="lastName"><%= lastName %></span></h3>
@@ -35,8 +32,8 @@
             </div>
             <br><br>
         </div>
-        <%- include('footer'); -%>
-        <script src="../js/components/results.js"></script>
+    <%- include('footer'); -%>
+    <script src="../js/components/results.js"></script>
 </body>
 
 </html>

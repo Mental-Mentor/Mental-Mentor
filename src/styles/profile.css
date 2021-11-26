@@ -18,7 +18,7 @@ body {
 .container {
     padding-top: 75px;
     text-align: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 205px);
 }
 .info-container {
     background-color:#F3E0F4;
