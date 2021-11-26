@@ -12,39 +12,36 @@
 </head>
 
 <body>
-    <!-- Navbar - change this to logged in header later -->
     <%- include('navbarLoggedIn'); -%>
 
-        <!-- Display user data in profile -->
         <div class="container">
 
-            <!-- <h1>Welcome <span id="userFirstName"></span>!</h1> -->
             <h1>Welcome <%= firstName %>!</h1>
 
-            <!-- Placeholder picture for profile - update src later -->
             <div class="image-container">
                 <img class="profilePic" src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
                     alt="profilePic">
             </div>
 
             <div class="info-container">
-                <p id="name"><span id="firstName">
+                <h3 id="name"><span id="firstName">
                         <%= firstName %>
                     </span><span id="lastName">
                         <%= lastName %>
-                    </span></p>
+                    </span></h3>
                 <p id="phone"><%= phoneNo %></p>
                 <p id="email">email here</p>
                 <p id="dob">Birthdate: <%= dob %></p>
                 <p id="address"><span id="address1"><%= address1 %></span><span id="address2">, <%= address2 %></span></p>
-                <p id="cityStZip"><span id="city"><%= city %>, </span><span id="state"><%= state %></span><span id="zip"><%= zipcode %></span></p>
+                <p id="cityStZip"><span id="city"><%= city %>, </span><span id="state"><%= state %> </span><span id="zip"><%= zipcode %></span></p>
 
                 <br>
-                <a href="/questionnaire"><button class="btn">Complete Questionnaire</button></a>
+                <a href="/questionnaire"><button class="button">Complete Questionnaire</button></a>
                 <br><br>
             </div>
         </div>
-        <br><br>
+
+        <%- include('footer'); -%>
         <script src="../js/components/profile.js"></script>
 </body>
 

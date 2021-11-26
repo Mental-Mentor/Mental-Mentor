@@ -26,7 +26,7 @@
             <!-- Display user data in profile -->
             <div class="info-container">
                 <div class="therapistInfo">
-                    <p id="name"><span id="firstName"><%= firstName %> </span><span id="lastName"><%= lastName %></span></p>
+                    <h3 id="name"><span id="firstName"><%= firstName %> </span><span id="lastName"><%= lastName %></span></h3>
                     <p id="phone"><%= phoneNo %></p>
                     <p id="category"><span id="category-span"><%= category %></span> Therapist - <span id="experience"><%= experience %> years' experience</span></p>
                     <p id="address"><span id="address1"><%= address1 %></span><span id="address2">, <%= address2 %></span></p>
@@ -35,6 +35,7 @@
             </div>
             <br><br>
         </div>
+        <%- include('footer'); -%>
         <script src="../js/components/results.js"></script>
 </body>
 
