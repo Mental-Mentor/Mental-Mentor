@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/about.css" />
     <title>Mental Mentor</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
-
+  <body>
     <%- include('navbar'); -%>
 
-        <!--Main Content-->
+    <!--Main Content-->
+    <div class="abouthero">
+      <div class="topcontent">
+        <h1 class="heading">Mental Mentor</h1>
+        <h2 class="heading" style="padding-top: 10px">You are not alone.</h2>
+        <p>
+          1 in 5 adults experience some type of mental illness, but less than
+          half get help. We'll connect you with a therapist so you can start
+          receiving the treatment you deserve.
+        </p>
+        <a href="/register"><button class="button">START HEALING</button></a>
+      </div>
+    </div>
 
-        <div class="abouthero">
+    <div class="content2">
+      <div class="image">
+        <img
+          src="../images/My Post (41).jpg"
+          alt="therapist"
+          width="500"
+          height="400"
+        />
+      </div>
+      <div class="how">
+        <h2 style="font-size: 30px">How It Works</h2>
 
-
-            <div class="herocontent">
-                <h1 class="heading">Mental Mentor</h1>
-                <p style="font-size: 30px;">
-                    You are not alone. <br> 1 in 5 adults experience some type of
-                    <br> mental illness, but less than half get help. We'll connect you with a
-                    <br> therapist so you can start receiving the treatment you deserve.
-                    <a href="/register"><button class="button">START HEALING</button></a>
-                </p>
-
+        <ol class="list-group list-group-numbered">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">Create an account with us</div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">Take a brief questionnaire</div>
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              Get matched to a therapist meeting your needs
             </div>
-        </div>
-
-
-
-        <div class="content2">
-            <div class="image">
-                <img src="../images/My Post (41).jpg" alt="therapist" width="500" height="400">
+          </li>
+          <li
+            class="list-group-item d-flex justify-content-between align-items-start"
+          >
+            <div class="ms-2 me-auto">
+              Contact your therapist to begin treatment
             </div>
-            <div class="how">
-                <h2 style="font-size: 30px">How It Works</h2>
-
-
-                <ol class="list-group list-group-numbered">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Register</div>
-                            Create your account with us
-                        </div>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Receive notification</div>
-                            Matched patients with your category will be sent
-                        </div>
-
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Connect</div>
-                            Connect with them through our platform
-                        </div>
-
-                    </li>
-                </ol>
-                <a href="/therapistRegister"><button class="button" style="margin-left:10px; margin-top:10px">REGISTER</button></a>
-            </div>
-
-        </div>
-        <div class="content">
-            <p style="font-size: 40px">
-                "Life get better when <br> health becomes your first<br> priority" -Maxime Lagace
-            </p>
-
-
-        </div>
-        <%- include('footer'); -%>
-</body>
-
+          </li>
+        </ol>
+        <a href="/register"
+          ><button class="button" style="margin-left: 10px; margin-top: 10px">
+            REGISTER
+          </button></a
+        >
+      </div>
+    </div>
+    <div class="content">
+      <p style="font-size: 40px">
+        "Life get better when <br />
+        health becomes your first<br />
+        priority" -Maxime Lagace
+      </p>
+    </div>
+    <%- include('footer'); -%>
+  </body>
 </html>

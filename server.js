@@ -1,8 +1,11 @@
 // Express to run server and routes
+require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 var path = require("path");
+const mongoose = require("mongoose");
+const encrypt = require("mongoose-encryption");
 
 const app = express();
 app.set("view engine", "ejs");
@@ -72,16 +75,15 @@ app.get("/results", function (req, res) {
   res.render("results");
 });
 
-app.get("/footer", function (req, res) {
-  res.render("footer");
+app.get("/therapistLogin", function (req, res) {
+  res.render("therapistLogin");
 });
 // Database setup
-const mongoose = require("mongoose");
 
+const uri = process.env.URI;
 mongoose
   .connect(
-    "mongodb+srv://root:root@cluster0.ejtkg.mongodb.net/mental_mentor_db?retryWrites=true&w=majority",
-    { useNewUrlParser: true }
+    uri, { useNewUrlParser: true }
   )
   .then(() => {
     console.log("MONGO CONNECTION OPEN");
@@ -91,7 +93,7 @@ mongoose
     console.log(err);
   });
 
-const userSchema = {
+const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   email: String,
@@ -104,7 +106,10 @@ const userSchema = {
   city: String,
   state: String,
   zipcode: Number,
-};
+});
+
+
+userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password', 'repassword']});
 
 const User = new mongoose.model("User", userSchema);
 
@@ -146,6 +151,7 @@ app.post("/login", function (req, res) {
           userId = foundUser.id;
           userFirstname = foundUser.firstName;
           userLastName = foundUser.lastName;
+          userEmail = foundUser.email;
           userPhoneNo = foundUser.phoneNo;
           userDob = foundUser.dob;
           userAddress1 = foundUser.address1;
@@ -157,6 +163,7 @@ app.post("/login", function (req, res) {
           res.render("profile", {
             firstName: userFirstname,
             lastName: userLastName,
+            email: userEmail,
             phoneNo: userPhoneNo,
             dob: userDob,
             address1: userAddress1,
@@ -194,16 +201,16 @@ app.post("/questionnaire", function (req, res) {
   let result = "All(Mood,Family,Addiction)";
   if (scoreArray[1] == scoreArray[2]) {
     console.log("return All Therapist");
-    result = "all";
+    result = "All(Mood,Family,Addiction)";
   } else if (scoreArray[2] == moodScore) {
     console.log("return Mood Therapist");
-    result = "mood";
+    result = "Mood";
   } else if (scoreArray[2] == familyScore) {
     console.log("return Family Therapist");
-    result = "family";
+    result = "Family";
   } else if (scoreArray[2] == addictionScore) {
     console.log("return Addiction Therapist");
-    result = "addiction";
+    result = "Addiction";
   }
   console.log(result);
   Therapist.findOne({ category: result }, function (err, foundTherapist) {
@@ -214,6 +221,7 @@ app.post("/questionnaire", function (req, res) {
       if (foundTherapist) {
         therapistFirstname = foundTherapist.firstName;
         therapistLastName = foundTherapist.lastName;
+        therapistEmail = foundTherapist.email;
         therapistPhoneNo = foundTherapist.phoneNo;
         therapistDob = foundTherapist.dob;
         therapistCategory = foundTherapist.category;
@@ -227,6 +235,7 @@ app.post("/questionnaire", function (req, res) {
         res.render("results", {
           firstName: therapistFirstname,
           lastName: therapistLastName,
+          email: therapistEmail,
           phoneNo: therapistPhoneNo,
           dob: therapistDob,
           category: therapistCategory,
@@ -290,4 +299,47 @@ app.post("/therapistRegister", function (req, res) {
   });
 });
 
+app.post("/therapistLogin", function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  console.log(username);
+  Therapist.findOne({ email: username }, function (err, foundTherapist) {
+    if (err) {
+      console.log(err);
+      res.send("Username is wrong");
+    } else {
+      if (foundTherapist) {
+        if (foundTherapist.password === password) {
+          therapistFirstname = foundTherapist.firstName;
+        therapistLastName = foundTherapist.lastName;
+        therapistEmail = foundTherapist.email;
+        therapistPhoneNo = foundTherapist.phoneNo;
+        therapistDob = foundTherapist.dob;
+        therapistCategory = foundTherapist.category;
+        therapistExperience = foundTherapist.experience;
+        therapistAddress1 = foundTherapist.address1;
+        therapistAddress2 = foundTherapist.address2;
+        therapistCity = foundTherapist.city;
+        therapistState = foundTherapist.state;
+        therapistZipcode =foundTherapist.zipcode;
+          
+          res.render("profile", {
+            firstName: therapistFirstname,
+            lastName: therapistLastName,
+            email: therapistEmail,
+            phoneNo: therapistPhoneNo,
+            dob: therapistDob,
+            category: therapistCategory,
+            experience: therapistExperience,
+            address1: therapistAddress1,
+            address2: therapistAddress2,
+            city: therapistCity,
+            state: therapistState,
+            zipcode: therapistZipcode,
+          });
+        }
+      }
+    }
+  });
+});
 
