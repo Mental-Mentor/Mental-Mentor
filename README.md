@@ -8,6 +8,7 @@ Mental Mentor is a web application which is a platform for connecting patients a
 * HTML
 * CSS
 * JS
+* Bootstrap
 * Node JS
 * EJS (Embedded Javascript template)
 * mongodb
@@ -28,13 +29,7 @@ Project will be available at [localhost:8000](http://localhost:8000/)
 
 ## Frontend structure
 
-* `src/js/components` - All reusable components goes here
-* `src/images` - all images goes in here
-* `src/styles` - all css goes heres
-* `views` - all ejs files
-
-## Demo Screen Shot
-
-
-  
-
+* `src/js/components` - All JS files go in here
+* `src/images` - all images go in here
+* `src/styles` - all CSS files go in here
+* `views` - all EJS files go in here
