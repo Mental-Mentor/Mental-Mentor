@@ -1,11 +1,11 @@
-body{
+body {
     background-color: #FDF9FD;
     height: 100vh;
     font-family: 'Nunito', sans-serif;
     margin: 0px;
     text-align: center;
 }
-h2 {
+.content-container {
     text-align: center;
 }
 #quiz-container{
@@ -31,6 +31,12 @@ input {
 }
 .error {
     color: red;
+}
+.input-group-container {
+    margin: 20px 0;
+}
+.input-container {
+    margin: 0 3px 0 15px;
 }
 
 @media (max-width: 860px) {

@@ -16,13 +16,15 @@ body {
     margin-right: auto;
 }
 .container {
+    padding-top: 75px;
     text-align: center;
+    min-height: calc(100vh - 205px);
 }
 .info-container {
     background-color:#F3E0F4;
     margin: auto;
     border-radius: 10px;
-    padding: 5px 10%;
+    padding: 50px 10%;
     width: fit-content;
 }
 .btn {
