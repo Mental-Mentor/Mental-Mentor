@@ -323,7 +323,7 @@ app.post("/therapistLogin", function (req, res) {
         therapistState = foundTherapist.state;
         therapistZipcode =foundTherapist.zipcode;
           
-          res.render("profile", {
+          res.render("therapistProfile", {
             firstName: therapistFirstname,
             lastName: therapistLastName,
             email: therapistEmail,
