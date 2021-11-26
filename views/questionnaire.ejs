@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Questionnaire</title>
     <link rel="stylesheet" href="./styles/questionnaire.css" />
     <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
@@ -14,218 +14,228 @@
 
 <body>
     <%- include('navbarLoggedIn'); -%>
+        <div class="content-container">
+            <h2 id="error" class="error"></h2>
 
-        <h1 id="error" class="error"></h1>
+            <h3>Please complete the following questions so we can find the right therapist for you:</h3>
 
-        <h2>Please complete the following questions so we can find the right therapist for you:</h2>
+            <div id="quiz-container">
+                <form id="quesForm" method="post">
+                    <div class="mood">
+                        <br>
+                        <h4>Over the past 2 weeks, how often have you experienced:</h4>
+                        <br>
 
-        <div id="quiz-container">
-            <form  id="quesForm" method="post">
-                <div class="mood">
-                    <h3>Over the past 2 weeks, how often have you experienced:</h3>
+                        <h5>1. Little interest or pleasure in doing things?</h5>
+                        <h5 id="errorQ1" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q1" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q1" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q1" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q1" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q1" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
 
-                    <h4>1. Little interest or pleasure in doing things?</h4>
-                    <h4 id="errorQ1" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q1" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q1" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q1" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q1" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q1" value="4">Nearly every day
-                        </span>
-                    </div>
+                        <h5>2. Difficulty falling asleep, staying asleep, or sleeping more than usual?</h5>
+                        <h5 id="errorQ2" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q2" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q2" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q2" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q2" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q2" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
 
-                    <h4>2. Difficulty falling asleep, staying asleep, or sleeping more than usual?</h4>
-                    <h4 id="errorQ2" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q2" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q2" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q2" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q2" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q2" value="4">Nearly every day
-                        </span>
-                    </div>
-
-                    <h4>3. Trouble focusing, anxious thoughts, or restlessness?</h4>
-                    <h4 id="errorQ3" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q3" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q3" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q3" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q3" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q3" value="4">Nearly every day
-                        </span>
-                    </div>
-                </div>
-                <br><br>
-
-                <div class="family">
-                    <h3>Please rate the following statements:</h3>
-
-                    <h4>4. I am struggling to know how to parent my child, and it is interfering with my ability to
-                        handle life and experience happiness.</h4>
-                    <h4 id="errorQ4" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q4" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q4" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q4" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q4" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q4" value="4">Nearly every day
-                        </span>
-                    </div>
-
-                    <h4>5. I am struggling in my relationship with my spouse/partner, and it is interfering with my
-                        ability to handle life and experience happiness.</h4>
-                    <h4 id="errorQ5" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q5" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q5" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q5" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q5" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q5" value="4">Nearly every day
-                        </span>
-                    </div>
-
-                    <h4>6. I have difficulty maintaining relationships with people and find myself isolating and/or
-                        pushing people away.</h4>
-                    <h4 id="errorQ6" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q6" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q6" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q6" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q6" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q6" value="4">Nearly every day
-                        </span>
-                    </div>
-                </div>
-                <br><br>
-
-                <div class="addiction">
-                    <h3>How often...</h3>
-                    <h4>7. Do you drink alcohol or use mind-altering substances?</h4>
-                    <h4 id="errorQ7" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q7" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q7" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q7" value="2">Monthly
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q7" value="3">Weekly
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q7" value="4">Nearly every day
-                        </span>
-                    </div>
-
-                    <h4>8. Have family, friends, or anyone else expressed concern over your alcohol/drug usage?</h4>
-                    <h4 id="errorQ8" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q8" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q8" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q8" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q8" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q8" value="4">Nearly every day
-                        </span>
-                    </div>
-
-                    <h4>9. Have you tried to control your alcohol/drug usage and had difficulty doing so?</h4>
-                    <h4 id="errorQ9" class="error"></h4>
-                    <div class="input-group-container">
-                        <span class="input-container">
-                            <input type="radio" name="q9" value="0" required>Never
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q9" value="1">Rarely
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q9" value="2">Sometimes
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q9" value="3">Often
-                        </span>
-                        <span class="input-container">
-                            <input type="radio" name="q9" value="4">Nearly every day
-                        </span>
+                        <h5>3. Trouble focusing, anxious thoughts, or restlessness?</h5>
+                        <h5 id="errorQ3" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q3" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q3" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q3" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q3" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q3" value="4"> Nearly every day
+                            </span>
+                        </div>
                     </div>
                     <br><br>
-                </div>
-                <button id="submitButton" class="button" onclick="submitForm()" type="submit" >Find My
-                    Therapist</button>
-                <br><br>
-            </form>
+
+                    <div class="family">
+                        <br>
+                        <h4>Please rate the following statements:</h4>
+                        <br>
+                        <h5>4. I am struggling to know how to parent my child, and it is interfering with my ability to
+                            handle life and experience happiness.</h5>
+                        <h5 id="errorQ4" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q4" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q4" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q4" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q4" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q4" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
+
+                        <h5>5. I am struggling in my relationship with my spouse/partner, and it is interfering with my
+                            ability to handle life and experience happiness.</h5>
+                        <h5 id="errorQ5" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q5" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q5" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q5" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q5" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q5" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
+
+                        <h5>6. I have difficulty maintaining relationships with people and find myself isolating and/or
+                            pushing people away.</h5>
+                        <h5 id="errorQ6" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q6" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q6" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q6" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q6" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q6" value="4"> Nearly every day
+                            </span>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="addiction">
+                        <br>
+                        <h4>How often...</h4>
+                        <br>
+                        <h5>7. Do you drink alcohol or use mind-altering substances?</h5>
+                        <h5 id="errorQ7" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q7" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q7" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q7" value="2"> Monthly
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q7" value="3"> Weekly
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q7" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
+
+                        <h5>8. Have family, friends, or anyone else expressed concern over your alcohol/drug usage?</h5>
+                        <h5 id="errorQ8" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q8" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q8" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q8" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q8" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q8" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br>
+
+                        <h5>9. Have you tried to control your alcohol/drug usage and had difficulty doing so?</h5>
+                        <h5 id="errorQ9" class="error"></h5>
+                        <div class="input-group-container">
+                            <span class="input-container">
+                                <input type="radio" name="q9" value="0" required> Never
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q9" value="1"> Rarely
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q9" value="2"> Sometimes
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q9" value="3"> Often
+                            </span>
+                            <span class="input-container">
+                                <input type="radio" name="q9" value="4"> Nearly every day
+                            </span>
+                        </div>
+                        <br><br>
+                    </div>
+                    <button id="submitButton" class="button" onclick="submitForm()" type="submit">Find My
+                        Therapist</button>
+                    <br><br>
+                </form>
+            </div>
         </div>
         <br><br>
-
         <%- include('footer'); -%>
-
         <script src="../js/components/questionnaireData.js"></script>
 </body>
 
