@@ -1,5 +1,5 @@
 // Express to run server and routes
-require('dotenv').config()
+//require('dotenv').config()
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -86,7 +86,7 @@ app.get("/therapistLogin", function (req, res) {
 const uri = process.env.URI;
 mongoose
   .connect(
-    uri, { useNewUrlParser: true }
+    "mongodb+srv://root:root@cluster0.ejtkg.mongodb.net/mental_mentor_db?retryWrites=true&w=majority", { useNewUrlParser: true }
   )
   .then(() => {
     console.log("MONGO CONNECTION OPEN");
@@ -111,8 +111,8 @@ const userSchema = new mongoose.Schema({
   zipcode: Number,
 });
 
-
-userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password', 'repassword']});
+const secret = "Thisisourlittlesecret";
+userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password', 'repassword']});
 
 const User = new mongoose.model("User", userSchema);
 
