@@ -3,6 +3,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 var path = require("path");
+const mongoose = require("mongoose");
+const encrypt = require("mongoose-encryption");
 
 const app = express();
 app.set("view engine", "ejs");
@@ -76,7 +78,6 @@ app.get("/footer", function (req, res) {
   res.render("footer");
 });
 // Database setup
-const mongoose = require("mongoose");
 
 mongoose
   .connect(
@@ -91,7 +92,7 @@ mongoose
     console.log(err);
   });
 
-const userSchema = {
+const userSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   email: String,
@@ -104,7 +105,10 @@ const userSchema = {
   city: String,
   state: String,
   zipcode: Number,
-};
+});
+
+const secret = "Thisisourlittlesecret";
+userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password', 'repassword']});
 
 const User = new mongoose.model("User", userSchema);
 
@@ -194,16 +198,16 @@ app.post("/questionnaire", function (req, res) {
   let result = "All(Mood,Family,Addiction)";
   if (scoreArray[1] == scoreArray[2]) {
     console.log("return All Therapist");
-    result = "all";
+    result = "All(Mood,Family,Addiction)";
   } else if (scoreArray[2] == moodScore) {
     console.log("return Mood Therapist");
-    result = "mood";
+    result = "Mood";
   } else if (scoreArray[2] == familyScore) {
     console.log("return Family Therapist");
-    result = "family";
+    result = "Family";
   } else if (scoreArray[2] == addictionScore) {
     console.log("return Addiction Therapist");
-    result = "addiction";
+    result = "Addiction";
   }
   console.log(result);
   Therapist.findOne({ category: result }, function (err, foundTherapist) {
@@ -290,4 +294,45 @@ app.post("/therapistRegister", function (req, res) {
   });
 });
 
+app.post("/therapistLogin", function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  console.log(username);
+  Therapist.findOne({ email: username }, function (err, foundTherapist) {
+    if (err) {
+      console.log(err);
+      res.send("Username is wrong");
+    } else {
+      if (foundTherapist) {
+        if (foundTherapist.password === password) {
+          therapistFirstname = foundTherapist.firstName;
+        therapistLastName = foundTherapist.lastName;
+        therapistPhoneNo = foundTherapist.phoneNo;
+        therapistDob = foundTherapist.dob;
+        therapistCategory = foundTherapist.category;
+        therapistExperience = foundTherapist.experience;
+        therapistAddress1 = foundTherapist.address1;
+        therapistAddress2 = foundTherapist.address2;
+        therapistCity = foundTherapist.city;
+        therapistState = foundTherapist.state;
+        therapistZipcode =foundTherapist.zipcode;
+          
+          res.render("profile", {
+            firstName: therapistFirstname,
+            lastName: therapistLastName,
+            phoneNo: therapistPhoneNo,
+            dob: therapistDob,
+            category: therapistCategory,
+            experience: therapistExperience,
+            address1: therapistAddress1,
+            address2: therapistAddress2,
+            city: therapistCity,
+            state: therapistState,
+            zipcode: therapistZipcode,
+          });
+        }
+      }
+    }
+  });
+});
 
