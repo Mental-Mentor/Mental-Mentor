@@ -22,7 +22,10 @@ app.use(
 app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")))
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const port = 8000;
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 8000;
+}
 
 // Spin up the server
 const server = app.listen(port, listening);
